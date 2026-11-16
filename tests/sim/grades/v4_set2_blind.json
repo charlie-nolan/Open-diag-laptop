@@ -1,0 +1,254 @@
+{
+ "model": "claude-opus-5-5",
+ "seed": 20261113,
+ "grades": {
+  "1": {
+   "q_lemon": 1,
+   "q_factory": 1,
+   "c_factory": 2,
+   "c_lemon": 2
+  },
+  "2": {
+   "c_lemon": 2,
+   "c_factory": 2,
+   "q_lemon": 1,
+   "q_factory": 1
+  },
+  "3": {
+   "c_lemon": 2,
+   "q_factory": 2,
+   "c_factory": 2,
+   "q_lemon": 2
+  },
+  "4": {
+   "q_factory": 1,
+   "c_lemon": 2,
+   "q_lemon": 1,
+   "c_factory": 2
+  },
+  "5": {
+   "c_lemon": 2,
+   "q_lemon": 0,
+   "q_factory": 0,
+   "c_factory": 2
+  },
+  "6": {
+   "q_lemon": 2,
+   "c_lemon": 2,
+   "c_factory": 2,
+   "q_factory": 2
+  },
+  "7": {
+   "q_factory": 1,
+   "c_lemon": 2,
+   "c_factory": 2,
+   "q_lemon": 1
+  },
+  "8": {
+   "q_factory": 2,
+   "c_factory": 2,
+   "c_lemon": 2,
+   "q_lemon": 2
+  },
+  "9": {
+   "c_factory": 2,
+   "q_factory": 1,
+   "c_lemon": 2,
+   "q_lemon": 1
+  },
+  "10": {
+   "c_lemon": 2,
+   "q_lemon": 0,
+   "c_factory": 2,
+   "q_factory": 1
+  },
+  "11": {
+   "q_lemon": 2,
+   "q_factory": 0,
+   "c_lemon": 2,
+   "c_factory": 1
+  },
+  "12": {
+   "c_factory": 2,
+   "q_factory": 2,
+   "c_lemon": 2,
+   "q_lemon": 2
+  },
+  "13": {
+   "c_lemon": 2,
+   "c_factory": 2,
+   "q_lemon": 2,
+   "q_factory": 2
+  },
+  "14": {
+   "c_factory": 2,
+   "c_lemon": 2,
+   "q_factory": 2,
+   "q_lemon": 2
+  },
+  "15": {
+   "c_factory": 2,
+   "c_lemon": 2,
+   "q_lemon": 2,
+   "q_factory": 2
+  },
+  "16": {
+   "q_lemon": 1,
+   "q_factory": 1,
+   "c_lemon": 2,
+   "c_factory": 2
+  },
+  "17": {
+   "c_lemon": 2,
+   "q_factory": 2,
+   "q_lemon": 2,
+   "c_factory": 2
+  },
+  "18": {
+   "q_lemon": 1,
+   "c_factory": 2,
+   "q_factory": 1,
+   "c_lemon": 2
+  },
+  "19": {
+   "q_lemon": 1,
+   "q_factory": 1,
+   "c_lemon": 2,
+   "c_factory": 2
+  },
+  "20": {
+   "q_lemon": 2,
+   "c_factory": 2,
+   "q_factory": 2,
+   "c_lemon": 2
+  }
+ },
+ "reasons": {
+  "1": {
+   "q_lemon": "Leads with the owner's coil guess (treating it as coil-on-plug with a cyl 1 swap), has wires/plugs only lower down, never mentions the flashing-MIL catalyst risk, and omits injector and compression checks.",
+   "q_factory": "Leads with a coil swap that assumes per-cylinder coils, has wires and plugs only lower down, and ignores the flashing-MIL catalyst warning.",
+   "c_factory": "Leads with the cylinder 2 wire and boot and a swap test, checks for valve-cover oil in the plug well, then the plug, then tests the coil, injector and compression, and warns about the flashing MIL.",
+   "c_lemon": "Leads with the cylinder 2 wire and plug-well oil, notes the wasted-spark partner-cylinder logic, gates the coil behind a spark test, includes compression and the injector, and warns about the flashing MIL; its only gap is that it lacks an explicit wire swap."
+  },
+  "2": {
+   "c_lemon": "Leads with residual-pressure loss, treats the shop's check-valve claim as untested, and gives the key-cycle prime test, a gauge hold test with clamp isolation of pump, regulator and injectors, and the regulator vacuum-hose check.",
+   "c_factory": "Leads with bleed-down and uses the free key-cycle test first, then a gauge leak-down with supply and return clamping to separate the check valve, regulator and injector, plus the vacuum-hose fuel check.",
+   "q_lemon": "Right direction with a gauge hold test, but it calls the shop's check-valve guess 'supported', skips the cheap key-cycle test and any clamp isolation, and goes to pump replacement on any excess drop.",
+   "q_factory": "Leads with the shop's check-valve guess as supported and concludes the check valve is leaking from any pressure drop, with no isolation of regulator or injectors and no key-cycle test, before replacing the pump."
+  },
+  "3": {
+   "c_lemon": "Leads with inspecting the original gas cap seal and filler pipe lip for salt corrosion, declines the canister and purge valve quote until those parts fail tests, includes a smoke test, and verifies over drive cycles.",
+   "q_factory": "Leads with the gas cap inspection and a clear-and-verify drive check, and rejects the untested canister and purge valve quote, though it skips the filler neck and puts the smoke test last.",
+   "c_factory": "Leads with the cap seal and click check, then the corroded filler pipe lip and neck hoses, and keeps the quoted parts behind testing, though it never explicitly calls for a smoke test.",
+   "q_lemon": "Leads with the gas cap and filler pipe seal and refuses the canister and purge valve without confirmation, despite an invented '70%+' statistic and confused step ordering for the canister."
+  },
+  "4": {
+   "q_factory": "It starts in the rear O2 circuit, but it leads with the shield wire and ECM ground, ranks cat removal ahead of the heater resistance test, and never says to fix P0141, clear codes and re-run the monitor.",
+   "c_lemon": "It fixes P0141 first (connector, heater power and ground, heater resistance per FSM), then clears codes, re-runs the catalyst monitor and confirms the cat by rear O2 mirroring only if P0420 returns.",
+   "q_lemon": "It points at the rear O2 circuit but leads with the shield wire, gives a wrong under-5 \u03a9 heater criterion, inverts the rear O2 catalyst logic, and never says to clear codes and re-run the drive cycle.",
+   "c_factory": "It leads with the disturbed rear O2 connector, harness and heater supply, then heater resistance, then clears codes and drives two cycles before condemning the cats, and uses front/rear graph comparison."
+  },
+  "5": {
+   "c_lemon": "Leads with head gasket combustion leak, with re-bleeding first as the cheap step and a block test to confirm, matching the key.",
+   "q_lemon": "Leads with replacing the recently replaced thermostat and never considers a head gasket or block test, which the key marks as a bad answer.",
+   "q_factory": "Leads with thermostat replacement, has air as only a secondary cause, and never mentions head gasket or combustion-leak testing.",
+   "c_factory": "Leads with head gasket combustion gas confirmed by a block test and bubble check, with bleeding as the next alternative, matching the key's direction."
+  },
+  "6": {
+   "q_lemon": "It leads with the blower resistor and gives a resistance test across the stages, though it oddly ranks the cabin filter second and never checks motor current draw as a cause of repeat failures.",
+   "c_lemon": "It leads with an open resistor or thermal fuse, then the connector and harness, then the switch, and ends with a motor current-draw check to prevent repeat resistor failure, which matches the key fully.",
+   "c_factory": "It leads with the resistor, checks the connector by back-probing voltage, checks the switch next, and finishes with filter and motor current draw as the root-cause check, which matches the key.",
+   "q_factory": "It correctly leads with the blower resistor, but it makes some dubious claims (FSM radiator-fan references, high bypassing the switch) and ranks the motor second."
+  },
+  "7": {
+   "q_factory": "It points toward the charging system and checks connections first, but it leads with battery-post terminal drop rather than belt and B+ or fusible-link checks, and it invents a 2000 rpm low-voltage reading that was never taken.",
+   "c_lemon": "It correctly treats the battery as the victim and leads with the cheap belt check, then alternator output at idle and 2000 rpm under load, then B-terminal and ground voltage drops.",
+   "c_factory": "It leads with alternator low output, an acceptable alternative, and explicitly sequences the cheap checks first (confirm voltage, belt, loaded test, B+, ground and fusible-link drops), keeping the battery last.",
+   "q_lemon": "It has the right direction with alternator undercharging, but it puts the alternator output test before the cheaper belt check, omits B+, ground and fusible-link checks, and adds an unlikely S-terminal lead."
+  },
+  "8": {
+   "q_factory": "Leads with the worn or heat-soaked starter solenoid and tests for voltage at the S terminal during the click; it does skip a proper voltage-drop test and adds an irrelevant valve-clearance item.",
+   "c_factory": "Leads with the starter solenoid contacts and confirms with B, M and S terminal voltages during a hot no-crank, then voltage-drop tests the positive cable and ground, matching the key closely.",
+   "c_lemon": "Leads with the starter or solenoid contacts and confirms with S, B+ and motor terminal voltages during a heat-soaked click, then voltage-drop tests the cable and ground as second, matching the key.",
+   "q_lemon": "Leads with the starter solenoid and tests S-terminal voltage during the click, so the direction is right, though it wrongly says bright lights rule out ground problems and lists the relay and neutral switch lower down."
+  },
+  "9": {
+   "c_factory": "It leads with reading the stored TCM blink code via the factory procedure, notes that the generic reader doesn't clear the TCM, and only then moves to the code-specific circuit and wiggle tests.",
+   "q_factory": "It correctly rejects the overheating/flush theory but treats 'no DTCs' as real and jumps to connector wiggle tests without first reading the TCU code with a Subaru-capable tool.",
+   "c_lemon": "It first reads the TCM code with the Select Monitor or diagnostic-connector method, recognizes fail-safe, and plans the code-specific circuit diagnosis before any fluid work.",
+   "q_lemon": "It rejects overheating but never reads the stored TCU code, leading with a wiggle-test guess and even listing a TCM as a part, which skips the key's first step."
+  },
+  "10": {
+   "c_lemon": "Leads with tire circumference mismatch as AWD wind-up cause, then transfer clutch/duty solenoid with FWD fuse diagnostic and ATF check, and defers CV axles to last.",
+   "q_lemon": "Dismisses the symptom as normal 4EAT behavior needing no repair and never addresses the tire mismatch or transfer clutch bind.",
+   "c_factory": "Leads with measuring tire circumference, then transfer clutch/duty solenoid via FWD-mode test and ATF condition, with CV axles last only if the bind persists.",
+   "q_factory": "Includes tire mismatch but leads with an unsupported TCM-ECM signal circuit fault, putting the correct cause second."
+  },
+  "11": {
+   "q_lemon": "Leads with an exhaust leak upstream of the front sensor, citing the rusted front nuts, and tests the joints on a cold start, though it wrongly calls the tick unrelated valve lash.",
+   "q_factory": "Leads with a fuel pressure recheck that was already in spec, never considers an exhaust leak, and treats the tick as valve clearance.",
+   "c_lemon": "Leads with the head-to-front-pipe flange leak, explains both the tick and the lean trims, and confirms with a cold-start stethoscope, soapy water or exhaust smoke test.",
+   "c_factory": "Correctly names the flange exhaust leak as the likeliest single cause but puts an unsupported MAP sensor check first, so the right cause sits lower down."
+  },
+  "12": {
+   "c_factory": "Leads with the rear wheel speed sensor harness/connector disturbed during the brake job, compares live wheel speeds, then checks sensor and tone ring, and leaves the module last; it misses that a rear-left code was already read, but the direction matches the key.",
+   "q_factory": "First issue is the rear wheel speed sensor, tested by comparing live rear wheel speeds on the Select Monitor; it wrongly says no DTCs exist and places the ECU second, but its lead matches the key.",
+   "c_lemon": "Leads with the rear ABS sensor harness/connector disturbed during the brake work, then the sensor and tone wheel, with the module last; it overlooks the existing rear-left code but follows the correct direction.",
+   "q_lemon": "Leads with rear sensor contamination or misalignment (air gap), then the tone ring and harness resistance, all acceptable per the key, and puts the ECU last; it misstates that no codes exist, but its direction is correct."
+  },
+  "13": {
+   "c_lemon": "Leads with rear sway bar end links and bushings, inspected with the suspension loaded by pry and shake, then strut mounts, and keeps struts last pending an internal knock check, which matches the key.",
+   "c_factory": "Leads with rear sway bar end links, then bar bushings, inspected with the wheels loaded, and puts strut mounts and struts last; this matches the key.",
+   "q_lemon": "Its first issue is rear sway bar end links with a hand-play check, which matches the key's likeliest cause, though it wrongly calls strut mounts ruled out and omits a loaded-suspension inspection.",
+   "q_factory": "Its first issue is rear sway bar links and bushings with a play check, which matches the key, though its later strut-mount orientation and seat issues are weakly supported."
+  },
+  "14": {
+   "c_factory": "Leads with a key-off parasitic draw test after modules sleep, isolates the stereo first, then fuse-pulls for hidden lamps or relays, and checks the alternator by disconnecting B+, which matches the key.",
+   "c_lemon": "Leads with an ammeter-in-series draw test after module sleep, with the stereo first, then fuse-pulling for hidden lamps or relays, then the B+ isolation test for diode leakage, all matching the key.",
+   "q_factory": "Leads with a parasitic draw measurement focused on the stereo and then fuse-pulling, which matches the key, though it skips a baseline reading and its engine-off AC ripple test for the alternator is invalid.",
+   "q_lemon": "Leads with a draw test targeting the aftermarket stereo and then interior-light fuse pulls, which matches the key, though it never uses the B+ disconnect and relies on an AC ripple check for the alternator."
+  },
+  "15": {
+   "c_factory": "Leads with valve cover gaskets and a UV dye trace before any head gasket work, and keeps the head gasket external seep and the lower seals and pan as dye-confirmed alternatives, matching the key.",
+   "c_lemon": "Leads with valve cover gaskets and a single UV dye trace covering the head-to-block seam, the cam and crank seals and the pan, and approves the head gasket job only if the dye confirms the seam, matching the key.",
+   "q_lemon": "Its first issue is the valve cover gasket leak, checked by cleaning the engine and inspecting before any head gasket work; this matches the key, though it wrongly says head gasket failure requires coolant signs and cites an unsupported ATF filter TSB.",
+   "q_factory": "Its first issue is the valve cover gasket leak, checked by cleaning the engine and inspecting, which matches the key's lead; its later points are weak, wrongly dismissing external head gasket seeps and adding an internal consumption issue that ends in a rebuild."
+  },
+  "16": {
+   "q_lemon": "A failed IACV is an acceptable cause, but A leads with replacing the IACV from an unplug test and treats the cheaper throttle body and passage cleaning as a follow-up, skipping the check the key puts first.",
+   "q_factory": "B also leads with testing and replacing the IACV and puts cleaning second; its unplug-test logic is muddled and it wrongly says carbon only causes low idle.",
+   "c_lemon": "C leads with cleaning and inspecting the throttle body and IACV passages, then checks the IACV connector, wiring and resistance against the FSM without guessing values, and adds a smoke test, matching the key.",
+   "c_factory": "D leads with cleaning the throttle body and IACV passages and does an FSM relearn only if the FSM gives one, then tests the IACV and its circuit, with a smoke test as a later alternative, matching the key."
+  },
+  "17": {
+   "c_lemon": "Leads with the knock sensor connector/harness disturbed during the intake job, then sensor mounting, torque and resistance, and links the sluggishness to timing retard, matching the key.",
+   "q_factory": "First issue is knock sensor connector/harness integrity after the intake work, which matches the key, though its resistance test is muddled and the intake gasket theory is ranked oddly high.",
+   "q_lemon": "Leads with the knock sensor connector disturbed during the intake job, then torque and the sensor itself, all matching the key and its acceptable alternatives; the cam sensor entry sits harmlessly last.",
+   "c_factory": "Leads with the connector/harness disturbed during the intake job, then sensor failure or mounting, and ties the symptoms to timing retard, matching the key."
+  },
+  "18": {
+   "q_lemon": "Leads with replacing the clutch assembly and only raises the oil leak as a secondary item. It also calls the 'just replace' opinion supported, and its test (holding the brake with throttle in 4th) is poorly designed.",
+   "c_factory": "Leads with a rear-of-engine oil leak (rear main seal, separator cover) contaminating the clutch and a slip test, separates engine oil from gear oil, checks release free play, and fixes the leak before replacing the clutch and resurfacing the flywheel.",
+   "q_factory": "Puts the oil leak first, but it skips cleaning and identifying the source, simply replaces both seals, calls the 'just replace' opinion supported, and never mentions release adjustment or the flywheel.",
+   "c_lemon": "Leads with an oil leak contaminating the clutch, with a degrease-and-locate test that tells engine oil from gear oil, then checks release free play and replaces the clutch with flywheel resurfacing after the leak is fixed."
+  },
+  "19": {
+   "q_lemon": "Leads correctly with battery/ground, but trusts the impossible data: it uses 14.3 V to clear the alternator and explains 2050 RPM as mislabeled cranking data instead of rejecting the capture.",
+   "q_factory": "Leads correctly with battery and suggests meter and load tests, but never notices the telemetry is impossible and treats 14.3 V and the other readings as valid.",
+   "c_lemon": "Says the 2050 rpm, 88 C and 14.3 V snapshot contradicts a cold key-on, engine-off capture and discards it, then leads with a meter and load test of the battery before voltage-drop testing the cables and only then the starter.",
+   "c_factory": "Rejects the live data as invalid for an engine that never started after a 3 C night, then follows the correct order: meter and load test the battery, voltage-drop the cables, and test the starter last."
+  },
+  "20": {
+   "q_lemon": "It leads with the crankshaft position sensor, using the resistance test, the 0 RPM cranking signal and the CKP circuit checks, and it rejects the fuel pump theory.",
+   "c_factory": "It leads with the CKP harness and connector, then the sensor, tested hot during the no-start including a hot-vs-cold resistance comparison, and correctly ranks the fuel pump last.",
+   "q_factory": "Its first issue is a CKP circuit wiring fault, an acceptable alternative, although its claim that 10.4 V cranking indicates a harness short is unfounded.",
+   "c_lemon": "It leads with the CKP sensor failing hot, tested during the failure with hot vs cold readings, follows with the harness, and uses cranking RPM to rule out the fuel pump."
+  }
+ },
+ "totals": {
+  "q_lemon": 28,
+  "q_factory": 27,
+  "c_factory": 39,
+  "c_lemon": 40
+ }
+}

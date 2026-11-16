@@ -1,0 +1,213 @@
+{
+ "model": "claude-opus-5-5",
+ "seed": 20261113,
+ "grades": {
+  "1": {
+   "steps": 1,
+   "think": 1,
+   "essay": 2
+  },
+  "2": {
+   "think": 2,
+   "steps": 2,
+   "essay": 2
+  },
+  "3": {
+   "steps": 1,
+   "essay": 1,
+   "think": 1
+  },
+  "4": {
+   "think": 2,
+   "essay": 2,
+   "steps": 1
+  },
+  "5": {
+   "steps": 2,
+   "essay": 2,
+   "think": 2
+  },
+  "6": {
+   "steps": 1,
+   "think": 1,
+   "essay": 1
+  },
+  "7": {
+   "think": 2,
+   "essay": 2,
+   "steps": 2
+  },
+  "8": {
+   "steps": 0,
+   "essay": 1,
+   "think": 2
+  },
+  "9": {
+   "essay": 2,
+   "steps": 2,
+   "think": 1
+  },
+  "10": {
+   "think": 2,
+   "steps": 2,
+   "essay": 2
+  },
+  "11": {
+   "think": 1,
+   "essay": 1,
+   "steps": 2
+  },
+  "12": {
+   "essay": 2,
+   "steps": 0,
+   "think": 2
+  },
+  "13": {
+   "essay": 2,
+   "steps": 0,
+   "think": 1
+  },
+  "14": {
+   "think": 2,
+   "essay": 2,
+   "steps": 2
+  },
+  "15": {
+   "essay": 2,
+   "think": 1,
+   "steps": 1
+  },
+  "16": {
+   "essay": 2,
+   "think": 2,
+   "steps": 2
+  },
+  "17": {
+   "steps": 1,
+   "think": 1,
+   "essay": 1
+  },
+  "18": {
+   "think": 1,
+   "steps": 1,
+   "essay": 2
+  },
+  "19": {
+   "essay": 1,
+   "think": 1,
+   "steps": 0
+  },
+  "20": {
+   "essay": 0,
+   "think": 2,
+   "steps": 2
+  }
+ },
+ "reasons": {
+  "1": {
+   "steps": "Leads with radiator cap failure and ranks head gasket only fourth, with weak counter-arguments, although its pressure-test step and dismissal of the radiator theory are reasonable.",
+   "think": "Leads with the cap and a cooling-system pressure test, places head gasket third with a block test, and does not blame the radiator, so the expected cause appears only lower down.",
+   "essay": "Leads with head-gasket combustion gas intrusion confirmed by a block test, rejects the undersized-radiator theory, covers bleeding, and invents no torque specs."
+  },
+  "2": {
+   "think": "Leads with the fuel cap (OEM vs aftermarket seal) as the cheap first check, then the filler neck seal and the evap valves, which matches the key's order.",
+   "steps": "Leads with the fuel cap, then the filler pipe packing, valves and hoses, and mentions a smoke test, which matches the key's cheap-first order.",
+   "essay": "Leads with the aftermarket cap and recommends an OEM swap, followed by the filler neck and valves, which matches the key's cheap-first order."
+  },
+  "3": {
+   "steps": "Leads with alternator output, which is in the key's charging-system scope, but it misreads 12.3 V as below a 10\u201315 V range, adds an irrelevant ABS ground step, and ranks the cheaper belt check last while wrongly dismissing slip as the cause of the whine.",
+   "essay": "Leads with the alternator output test and covers terminals and a useful belt-slip versus bearing water test, but it puts the cheaper belt tension and condition check fourth despite original belts at 143k miles.",
+   "think": "Correctly says 12.3 V is undercharging and leads with a proper loaded alternator output test, but it never checks belt tension or condition or separates belt slip from bearing whine, which the key puts first."
+  },
+  "4": {
+   "think": "Leads with the VSS2 circuit wiring and ground, which matches the key's speed-sensor circuit cause, and does not condemn the transmission. It misreads SPEED 0 at idle as signal loss and never mentions reading the TCM flash code.",
+   "essay": "Explicitly rejects the owner's failing-transmission guess and leads with the VSS2 harness and connector check, in line with the key. It omits the AT OIL TEMP flash-code diagnostic.",
+   "steps": "Rejects the transmission theory, but leads with a muddled ground-fault test (signal pin to chassis). It ranks valve body/solenoid above the actual VSS2 wiring/connector cause and cites an unrelated DTC."
+  },
+  "5": {
+   "steps": "Leads with tire diameter mismatch from new fronts and worn rears, and measures circumference and tread first, which matches the key; it misnames the AT transfer clutch as a viscous coupling only at #3.",
+   "essay": "Leads with tire diameter mismatch and a tread-depth measurement before any differential work, rightly rejecting the owner's rear-diff guess; the exhaust clunk is a secondary add-on.",
+   "think": "Leads with tire mismatch and tread-depth measurement, which matches the key's check-tires-first direction, and pushes the rear diff to last; it misses the transfer clutch."
+  },
+  "6": {
+   "steps": "Leads with the correct front-left sensor/wiring suspect but skips the key's first step, ABS self-diagnosis flash codes, and relies on Select Monitor live data while treating 'no DTCs' as conclusive.",
+   "think": "Right lead with front-left sensor wiring and connector, and it covers gap and tone ring, but it never reads ABS flash codes through the diagnosis connector or warning light, which is the cheaper first check the key puts first.",
+   "essay": "Leads with front-left harness damage and covers air gap and tone ring, but skips the ABS self-diagnosis flash-code procedure, and its resistance test is set up wrong ('ignition ON')."
+  },
+  "7": {
+   "think": "Leads with rear wheel bearing and checks for play by rocking the jacked-up wheel, though it never mentions differential noise as an alternative.",
+   "essay": "Leads with rear wheel bearing, tests by spinning each wheel by hand to compare sides, and lists the rear differential as an alternative, despite padding with power steering and a duplicate issue.",
+   "steps": "Leads with rear wheel bearing, tests by rotating by hand and checking play, and lists the differential second, though it cites a TSB number that may not exist and includes an irrelevant power steering item."
+  },
+  "8": {
+   "steps": "Leads with IAT sensor faults, which do not control A/C cycling here; it never addresses evaporator freezing or a proper gauge check and recharge by weight.",
+   "essay": "Rightly starts with gauge pressures and an evacuate-and-recharge, but calls it textbook low charge and never considers evaporator freezing or thermo control.",
+   "think": "Leads with overcharge, an acceptable cause in the key, and gives the right approach of gauges during the fault plus evacuation and recharge to spec, though it misses freezing and clutch issues."
+  },
+  "9": {
+   "essay": "Leads with a high-resistance left rear ground and a voltage-drop test to battery negative, then the trailer splice, which matches the key's bad ground or backfeed direction, though it cites no ground locations and does not say they were not found.",
+   "steps": "First issue is a poor left rear ground with a voltage-drop test under brake load, then the trailer splice, which matches the key, despite irrelevant DTC 11 and fuse padding lower down and no ground locations cited.",
+   "think": "Leads with the owner's trailer-wiring suspect and a disconnect test instead of the ground voltage-drop check the key puts first; the ground cause appears only second."
+  },
+  "10": {
+   "think": "Leads with high resistance in the starter circuit, including the solenoid contacts and ground, and tests it by measuring voltage at the starter during the crank, which matches the key's first cause and voltage-drop approach.",
+   "steps": "Leads with worn starter solenoid contacts and tests by measuring voltage at the starter terminal, which matches the key's likeliest cause, while ranking the suggested ignition switch lower.",
+   "essay": "Leads with high resistance in the starter circuit, tested by measuring voltage at the starter during the crank and checking the ground path, and properly questions the ignition-switch suspicion, which matches the key."
+  },
+  "11": {
+   "think": "It leads with a fuel pressure test and ranks vacuum leaks last, which skips the cheaper vacuum/smoke check the key puts first, despite the never-replaced intake gaskets.",
+   "essay": "It correctly flags the intake gasket vacuum leak as well supported, but still leads with fuel pressure, so the key's first check is only second.",
+   "steps": "It leads with a vacuum leak tested by spraying around the intake and throttle body, which matches the key's likeliest cause, and it correctly does not treat the MAF as primary."
+  },
+  "12": {
+   "essay": "Leads with the rear O2 heater circuit (P0141) and its resistance check before the cat, matching the key, though it claims no exhaust leaks were found without checking.",
+   "steps": "Leads with a faulty front O2 sensor, which is the wrong lead because P0141 is the rear heater circuit, and it treats the rear heater only as a shield-wire issue in second place.",
+   "think": "Fixes the P0141 rear O2 heater first, then checks for exhaust leaks, then re-evaluates the cat, which matches the key's order exactly."
+  },
+  "13": {
+   "essay": "Leads with valve clearance/lash adjusters, which the key accepts as an alternative, and ranks the timing belt tensioner/idler second; however, it asserts interference status and a '105k industry standard' interval without citing the manual.",
+   "steps": "Leads with vacuum hoses, which does not fit a mechanical tick that follows engine speed and is not in the key, and it never names the timing belt idlers or tensioner.",
+   "think": "Leads with a low-oil guess the key doesn't list, has valve clearance second and the timing belt tensioner/idler only third, and never cites the belt interval or mentions the water pump."
+  },
+  "14": {
+   "think": "Leads with an external leak focused on the valve cover gasket near the exhaust, and tests it by cleaning the engine and re-inspecting, which matches the key's first cause and first step.",
+   "essay": "Leads with an external valve cover/oil pan leak tested by clean-and-inspect, which matches the key's direction, and correctly argues against the rear main seal.",
+   "steps": "Leads with a valve cover gasket leak tested by visual inspection and rightly rejects the rear main seal, though the lower-ranked guesses (valve clearance, valve stem seals) are weak."
+  },
+  "15": {
+   "essay": "Leads with the cylinder 2 plug wire as the wet-weather arcing suspect and uses a wire swap and water-spray test, then coil and plug, which matches the key's order and cheapest-first check.",
+   "think": "Leads with the owner's coil-pack guess and puts the cheaper, likelier plug-wire arcing check third (wrongly claiming the FSM omits wires), though it still covers the wire, plug and injector.",
+   "steps": "Leads with the owner's coil-pack guess and never mentions plug wires, the key's likeliest wet-weather cause, though it does include the plug and the injector #2 circuit checks."
+  },
+  "16": {
+   "essay": "It leads with the IACV, which matches the key's first cause, and gives a sensible unplug test, although it dismisses vacuum leaks and throttle-body carbon too quickly.",
+   "think": "It leads with the IACV, which matches the key's likeliest cause, and its test includes checking the connector and inspecting the valve for carbon, which fits the key's circuit and carbon points.",
+   "steps": "Its first issue is the IACV, which matches the key, though its unplug-test logic is backwards and the TPS and connector items it adds are not well supported."
+  },
+  "17": {
+   "steps": "It leads with strut damper play, which the key does not list, but it covers lower arm bushings, strut mount and ball joint further down; it misses tie rod ends and a bent-component or alignment check.",
+   "think": "It leads with strut damper play, which is not in the key, and has strut mount only second; it explicitly dismisses control arm bushings and ball joint and omits tie rod ends and a pothole bend or alignment check.",
+   "essay": "It leads with strut damper play, which is not the key's lead, but includes strut mount, lower arm bushings and an alignment check; it wrongly dismisses ball joint play and omits tie rod ends."
+  },
+  "18": {
+   "think": "It leads with replacing the fuel pump assembly, which is the customer's suspect. Its first test is a bleed-down check, but it never separates the pump check valve from a leaking injector or the regulator, and its 5 psi threshold is not taken from the manual.",
+   "steps": "It leads with a clogged fuel filter, which is in the key but explains overnight pressure loss less well than a bleed-down fault. The check valve, injector and regulator causes are not prioritized, and its 20 psi threshold is invented.",
+   "essay": "It leads with pressure bleed-down from a failed pump check valve and a pressure-hold test first, which matches the key. It falls short by asserting a 2-second prime as fact, citing an unsourced psi figure, and leaving out the injector and regulator leak paths."
+  },
+  "19": {
+   "essay": "Correctly identifies clutch slippage but goes straight to replacement without the pedal free play/cable adjustment check the key puts first, and asserts a cable-operated clutch without a citation.",
+   "think": "Right cause, but it skips the cheaper free play/cable adjustment check, never considers oil contamination, and goes directly to clutch replacement.",
+   "steps": "Leads with a TCM/ECM connector fault on a manual-transmission car that has no TCM, which is a wrong lead even though clutch wear and the free play check appear lower down."
+  },
+  "20": {
+   "essay": "It diagnoses the impossible data as real, leading with total compression loss and an engine replacement, and it invents a P1590 harness procedure, even though it correctly rejects the hybrid battery.",
+   "think": "It treats the live data as impossible and asks for a verified rescan and confirmation of the CVT before diagnosing, though it misses the non-turbo, timing belt, petrol and code-applicability contradictions and the motor-oil-in-coolant hazard.",
+   "steps": "Identical to B: it flags the impossible readings and asks for a verified rescan and CVT confirmation rather than diagnosing, though it omits the other spec contradictions and the coolant hazard."
+  }
+ },
+ "totals": {
+  "steps": 25,
+  "think": 30,
+  "essay": 32
+ }
+}

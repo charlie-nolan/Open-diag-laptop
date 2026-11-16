@@ -1,0 +1,172 @@
+{
+ "model": "claude-opus-5-5",
+ "seed": 20261113,
+ "grades": {
+  "1": {
+   "lora": 1,
+   "base": 1
+  },
+  "2": {
+   "lora": 1,
+   "base": 0
+  },
+  "3": {
+   "lora": 2,
+   "base": 2
+  },
+  "4": {
+   "base": 2,
+   "lora": 2
+  },
+  "5": {
+   "lora": 1,
+   "base": 0
+  },
+  "6": {
+   "base": 0,
+   "lora": 0
+  },
+  "7": {
+   "lora": 1,
+   "base": 1
+  },
+  "8": {
+   "lora": 1,
+   "base": 2
+  },
+  "9": {
+   "lora": 1,
+   "base": 1
+  },
+  "10": {
+   "lora": 1,
+   "base": 0
+  },
+  "11": {
+   "base": 0,
+   "lora": 0
+  },
+  "12": {
+   "lora": 2,
+   "base": 1
+  },
+  "13": {
+   "lora": 2,
+   "base": 2
+  },
+  "14": {
+   "base": 2,
+   "lora": 2
+  },
+  "15": {
+   "lora": 2,
+   "base": 0
+  },
+  "16": {
+   "base": 1,
+   "lora": 1
+  },
+  "17": {
+   "base": 1,
+   "lora": 0
+  },
+  "18": {
+   "lora": 1,
+   "base": 1
+  },
+  "19": {
+   "base": 0,
+   "lora": 0
+  },
+  "20": {
+   "base": 2,
+   "lora": 0
+  }
+ },
+ "reasons": {
+  "1": {
+   "lora": "Leads with the owner's coil guess and wrongly says a single-cylinder misfire fits a coil fault; its proposed coil swap to cylinder 1 is not possible on this single wasted-spark coil pack, though it does include plugs and later injector and compression; it never mentions the cylinder 2 plug wire or the flashing-MIL warning.",
+   "base": "Rates the owner's coil theory as supported and leads with a coil/plug resistance check, with the injector second, but skips the cylinder 2 plug wire inspection and wire/plug swap, ignores the wasted-spark pairing logic, and omits the flashing-MIL catalyst warning."
+  },
+  "2": {
+   "lora": "It accepts the shop's pump/check-valve guess and points toward fuel delivery, but it tests running pressure instead of key-off bleed-down, never isolates pump from injector or regulator, and drifts into a clogged-filter conclusion.",
+   "base": "It endorses the guess and goes straight to replacing the fuel pump based on running/cranking pressure, with no bleed-down test or pinch-off isolation, which is the key's named bad answer."
+  },
+  "3": {
+   "lora": "Leads with the fuel filler cap and pipe seal check and rejects the untested canister/purge-valve quote. It does not mention a smoke test or the monitor drive cycle, but its first issue matches the key.",
+   "base": "Leads with inspecting the gas cap and filler pipe seal, calls the canister/purge quote unsupported, and recommends a smoke test before replacing parts, which matches the key's direction."
+  },
+  "4": {
+   "base": "It leads with the rear O2 sensor circuit (P0141) and harness before the converter, which matches the key's order, though it focuses on shield-wire continuity rather than heater fuse and resistance and adds an irrelevant head-gasket check.",
+   "lora": "It explicitly leads with the rear O2 sensor heater circuit before condemning the converter and questions the inspection station's 'dead cat' call, which matches the key's direction even though the answer is cut off."
+  },
+  "5": {
+   "lora": "Leads with a just-replaced thermostat (with a muddled test) and the cap, and skips the bleed check; head gasket is only third and tested by checking for oil rather than a combustion-leak test, so the right cause sits low down.",
+   "base": "Leads with thermostat failure as the only issue and never considers head gasket combustion leak, air in the system, or a block test, so its lead is wrong."
+  },
+  "6": {
+   "base": "Leads with a radiator cooling fan relay/ECM control circuit (and cites P0480) instead of the HVAC blower resistor, so it is the wrong system entirely.",
+   "lora": "Leads with the ECM signal to the main radiator fan relay, which is the wrong system; it never considers the blower resistor, its connector, or the speed switch."
+  },
+  "7": {
+   "lora": "Correctly blames the charging system rather than the battery and leads with the alternator, but goes straight to replacing it and never checks the cheaper items the key puts first: belt tension and condition, the B+ connection and the fusible link.",
+   "base": "Right direction with alternator charging failure, but skips the belt and connection checks, uses a wrong 12.6 V running threshold to condemn the alternator, and adds a made-up fuel temperature sensor opinion check."
+  },
+  "8": {
+   "lora": "It leads with the starter solenoid, which is the right direction, but its only test (turn the key and listen for the click) confirms nothing; it goes straight to replacing the starter and skips the voltage checks at B+/S and the cable/ground voltage-drop tests the key puts before buying parts.",
+   "base": "It leads with worn starter solenoid contacts, matching the key, rejects the battery correctly, and checks for voltage at the starter terminal before condemning it, though it skips the B+ vs S split and the cable/ground voltage-drop tests and adds an irrelevant valve-clearance note."
+  },
+  "9": {
+   "lora": "It correctly rejects the overheating/flush theory and treats the flashing lamp as a fault indication, but it guesses a power/ground circuit fault instead of first reading the stored TCU codes. It also never ties the harsh shifts to fail-safe and falls back on an ATF change.",
+   "base": "It rejects the overheating claim and points to an electrical fault, but it leads with a guessed ATF temperature sensor failure instead of retrieving the stored TCU code first. It also never recognizes the fail-safe behavior."
+  },
+  "10": {
+   "lora": "Leads with front brake drag, which the case already ruled out, but correctly identifies the tire mismatch as a lower issue and checks ATF, never naming AWD torque bind or the FWD fuse test.",
+   "base": "Leads with a DTC 45 intake manifold pressure signal fault even though no DTCs are stored, missing tire mismatch and AWD torque bind entirely."
+  },
+  "11": {
+   "base": "Leads with an intake leak or MAP sensor fault and never considers an exhaust leak upstream of the front O2 sensor, despite the clean smoke test and the rusted front exhaust flanges.",
+   "lora": "Leads with the IAT sensor and treats the ticking as valve-train or timing chain (the EJ251 is belt-driven), never inspecting the exhaust leak that explains both the tick and the lean code."
+  },
+  "12": {
+   "lora": "Its first issue is a faulty rear wheel speed sensor tested by comparing live wheel speeds, which matches an acceptable alternative, though it wrongly claims no DTCs exist, ignores the rear-left code, and ranks the module above the wiring.",
+   "base": "It stops to ask for more data and claims no DTCs despite the rear-left wheel speed code, so it never points at the rear-left corner or the brake-job wiring even though the case already had enough to direct the inspection."
+  },
+  "13": {
+   "lora": "Leads with the rear sway bar links and bushings, checks them before strut mounts, and correctly rejects strut replacement since the struts are dry and pass the bounce test, though it overstates the cause as 'confirmed' before inspection.",
+   "base": "Its first issue is the rear sway bar end links with a pry-bar inspection, which matches the key, though it invents a 'right-side pull' symptom and adds a weak strut-mount orientation lead."
+  },
+  "14": {
+   "base": "Leads with parasitic draw and names the stereo as a prime suspect, which is the right direction, though its main test is a resting-voltage check instead of an ammeter draw test and it wrongly says diode leakage can't cause a drain.",
+   "lora": "Leads with parasitic draw from the aftermarket stereo, an acceptable alternative, and measures current at the battery, though its pass/fail logic is backwards and it checks the alternator by charging voltage instead of disconnecting B+."
+  },
+  "15": {
+   "lora": "Leads with valve cover gasket leaks as the source of the oil loss, smoke and burning smell and rejects the unsupported head gasket quote, which matches the key's likeliest cause, though its test logic is muddled and it skips cleaning and UV dye.",
+   "base": "Leads with valve train wear and valve clearance, which does not explain an external oil leak dripping onto the exhaust, and it never proposes locating the leak or inspecting the valve cover gaskets."
+  },
+  "16": {
+   "base": "It leads with a failed IACV, which is an acceptable alternative, but it dismisses the dirty throttle body that the key puts first and goes straight to replacement without cleaning, a resistance test, or a smoke test.",
+   "lora": "It leads with IACV replacement and moves the cheaper throttle body and IAC cleaning to a secondary recheck, which inverts the key's order, and it adds an unsupported 'no maintenance approved' constraint with flawed connector test logic."
+  },
+  "17": {
+   "base": "Correctly identifies the knock sensor circuit and somewhat supports the owner's connector theory, but leads with a resistance-to-ground test and jumps to replacing the sensor instead of first inspecting the connector/harness disturbed by the intake job, and never links the sluggishness to ECM timing retard.",
+   "lora": "Falsely claims the EJ251 has no knock sensor and that the code is invalid, contradicts the reported sluggishness, and steers toward the intake gaskets rather than the knock circuit disturbed by the work."
+  },
+  "18": {
+   "lora": "Leads with checking clutch and flywheel and notes the oil residue, but it supports the shop's 'just replace the clutch' guess without identifying the oil leak source, and it wrongly frames this as transmission slipping with TCM checks on a manual car.",
+   "base": "Correctly identifies clutch slip as the lead issue, but its repair is to replace the clutch without finding and fixing the oil contamination source, and it adds irrelevant speed sensor and TCM items for a manual transmission."
+  },
+  "19": {
+   "base": "Never flags the impossible key-off data and uses the 14.3V reading as evidence against the battery while treating 2050 RPM as normal, which diagnoses data the key says is impossible.",
+   "lora": "Degenerates into a repetitive loop without noticing the impossible telemetry or giving any useful no-crank test plan such as battery voltage, terminals or voltage drop."
+  },
+  "20": {
+   "base": "Leads with the crankshaft position sensor circuit based on P0335 and 0 RPM while cranking, rejects the fuel pump theory, and gives a sensor resistance test, which matches the key.",
+   "lora": "It correctly rejects the fuel pump but never names the CKP sensor, and its repeated lead points to the battery, which the case already ruled out (10.4 V while cranking is normal)."
+  }
+ },
+ "totals": {
+  "lora": 21,
+  "base": 19
+ }
+}

@@ -1,0 +1,254 @@
+{
+ "model": "claude-opus-5-5",
+ "seed": 20261113,
+ "grades": {
+  "1": {
+   "v3_q_lemon": 1,
+   "v3_q_factory": 2,
+   "v3_c_factory": 2,
+   "v3_c_lemon": 2
+  },
+  "2": {
+   "v3_c_lemon": 2,
+   "v3_c_factory": 1,
+   "v3_q_lemon": 2,
+   "v3_q_factory": 2
+  },
+  "3": {
+   "v3_c_lemon": 2,
+   "v3_q_factory": 1,
+   "v3_c_factory": 2,
+   "v3_q_lemon": 1
+  },
+  "4": {
+   "v3_q_factory": 2,
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 2,
+   "v3_c_factory": 2
+  },
+  "5": {
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 2,
+   "v3_q_factory": 2,
+   "v3_c_factory": 2
+  },
+  "6": {
+   "v3_q_lemon": 1,
+   "v3_c_lemon": 2,
+   "v3_c_factory": 2,
+   "v3_q_factory": 1
+  },
+  "7": {
+   "v3_q_factory": 2,
+   "v3_c_lemon": 2,
+   "v3_c_factory": 2,
+   "v3_q_lemon": 2
+  },
+  "8": {
+   "v3_q_factory": 0,
+   "v3_c_factory": 2,
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 0
+  },
+  "9": {
+   "v3_c_factory": 2,
+   "v3_q_factory": 1,
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 2
+  },
+  "10": {
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 2,
+   "v3_c_factory": 2,
+   "v3_q_factory": 2
+  },
+  "11": {
+   "v3_q_lemon": 1,
+   "v3_q_factory": 1,
+   "v3_c_lemon": 2,
+   "v3_c_factory": 2
+  },
+  "12": {
+   "v3_c_factory": 2,
+   "v3_q_factory": 2,
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 0
+  },
+  "13": {
+   "v3_c_lemon": 1,
+   "v3_c_factory": 1,
+   "v3_q_lemon": 2,
+   "v3_q_factory": 1
+  },
+  "14": {
+   "v3_c_factory": 2,
+   "v3_c_lemon": 2,
+   "v3_q_factory": 0,
+   "v3_q_lemon": 1
+  },
+  "15": {
+   "v3_c_factory": 2,
+   "v3_c_lemon": 2,
+   "v3_q_lemon": 1,
+   "v3_q_factory": 1
+  },
+  "16": {
+   "v3_q_lemon": 2,
+   "v3_q_factory": 2,
+   "v3_c_lemon": 1,
+   "v3_c_factory": 2
+  },
+  "17": {
+   "v3_c_lemon": 2,
+   "v3_q_factory": 1,
+   "v3_q_lemon": 1,
+   "v3_c_factory": 2
+  },
+  "18": {
+   "v3_q_lemon": 1,
+   "v3_c_factory": 2,
+   "v3_q_factory": 1,
+   "v3_c_lemon": 2
+  },
+  "19": {
+   "v3_q_lemon": 1,
+   "v3_q_factory": 1,
+   "v3_c_lemon": 2,
+   "v3_c_factory": 2
+  },
+  "20": {
+   "v3_q_lemon": 0,
+   "v3_c_factory": 2,
+   "v3_q_factory": 0,
+   "v3_c_lemon": 2
+  }
+ },
+ "reasons": {
+  "1": {
+   "v3_q_lemon": "Leads with a radiator cap failure and puts the head gasket combustion leak only second, even though the bubbles and steady loss with no drips point to the gasket first.",
+   "v3_q_factory": "Leads with a head gasket combustion leak confirmed by a block test, rejects the radiator-size theory, includes bleeding and pressure testing, and invents no torque specs.",
+   "v3_c_factory": "Leads with a head gasket combustion leak using a chemical block test, falls back to a pressure test, includes an FSM bleed, and keeps the owner's radiator theory low.",
+   "v3_c_lemon": "Leads with an EJ25 head gasket combustion leak tested by block test or exhaust-gas sniff, adds pressure testing and bleeding, and correctly ranks the radiator last."
+  },
+  "2": {
+   "v3_c_lemon": "Leads with the fuel cap and filler pipe seal, checking cap tightness and seal first and then swapping in an OEM cap, before moving to the valves, hoses, canister and smoke test, which matches the key's cheap-checks-first order.",
+   "v3_c_factory": "Its first issue is the filler neck and it ranks the aftermarket cap last, even though it says the cap is physically checked first, so the cheapest check the key puts first sits lowest in the ranking.",
+   "v3_q_lemon": "Leads with the fuel cap (gasket inspection, OEM replacement) and then covers the drain and purge valves, canister, hoses and smoke test, which matches the key's direction.",
+   "v3_q_factory": "Leads with the aftermarket fuel cap and OEM replacement, then the purge and drain valves and the filler pipe seal, so its first issue matches the key's likeliest cause."
+  },
+  "3": {
+   "v3_c_lemon": "Leads with an undercharging alternator but checks belt tension first, then tests output at idle and 2000 rpm with loads, voltage-drops the connections and grounds, and separates belt slip from bearing whine, which matches the key.",
+   "v3_q_factory": "Its alternator lead is plausible, but it misreads 12.3 V as below a 10\u201315 V window, pads the list with irrelevant ABS ground and harness steps, and puts the belt check last.",
+   "v3_c_factory": "Leads with the generator undercharging, tests at idle and 2000 rpm under load, correctly notes the 10\u201315 V window is not a charging spec, and covers the belt, tensioner and connection checks.",
+   "v3_q_lemon": "Alternator is a plausible lead, but it misreads the FSM 10\u201315 V window, never checks the belt or connections, and does not separate belt slip from bearing whine."
+  },
+  "4": {
+   "v3_q_factory": "Leads with the VSS2 circuit (wiring and connector) and rejects the transmission-failure guess, matching the key, though it never explains the AT OIL TEMP flash as a stored TCM code and misreads 0 km/h at a standstill as signal loss.",
+   "v3_c_lemon": "Leads with the VSS2 circuit wiring and connector, says the AT OIL TEMP flash means the TCM has stored a fault and should be read, and rejects condemning the transmission.",
+   "v3_q_lemon": "Leads with the speed sensor circuit (wiring, connector, ground) and does not condemn the transmission, matching the key, but it skips the AT OIL TEMP flash code and treats 0 km/h while stationary as evidence.",
+   "v3_c_factory": "Leads with the VSS2 harness and connector, ties the AT OIL TEMP flash to a stored fault, and defers any hydraulic work until the signal is verified, matching the key."
+  },
+  "5": {
+   "v3_c_lemon": "Leads with front/rear tire mismatch, measured by tread depth and rolling circumference, then transfer clutch/duty C with the FWD fuse test, and correctly ranks the owner's rear-diff theory below these.",
+   "v3_q_lemon": "Its first issue is tire diameter mismatch with a tread-depth check, which matches the key, though it wrongly blames the parking-pawl recall for the clunk and omits the transfer clutch and FWD fuse test.",
+   "v3_q_factory": "Its first issue is tire mismatch with a tread-depth check, which matches the key, though the exhaust-clunk theory and the cited TSB look invented and it skips the transfer clutch and FWD fuse test.",
+   "v3_c_factory": "Leads with tire diameter mismatch (tread and circumference), then transfer clutch/duty C via the FWD fuse test, and puts the rear diff last, which matches the key's order."
+  },
+  "6": {
+   "v3_q_lemon": "It leads with the front-left wheel speed sensor and live data, but never reads the ABS self-diagnosis codes, takes 'no DTCs' at face value, and pads the list with an irrelevant stop light switch item.",
+   "v3_c_lemon": "It reads ABS codes with the Select Monitor first, then checks the FL harness/connector, the sensor with resistance and gap, and the tone ring, which matches the key's order.",
+   "v3_c_factory": "It starts by reading ABS current and history DTCs and cites the FSM procedure, then works through the FL harness, sensor and tone wheel, which matches the key.",
+   "v3_q_factory": "It gets the FL sensor circuit right, but skips the ABS self-diagnosis and code read the key puts first, and it invents data that the other wheels read 45 km/h."
+  },
+  "7": {
+   "v3_q_factory": "Leads with the rear wheel bearing, checks it for play and spins it by hand, and names the differential as the second issue, though it skips the load-change steering test.",
+   "v3_c_lemon": "Leads with the rear wheel bearing and uses the load-change test to pick the bad side, then checks play and hand rotation on the hoist, with the differential as the alternative.",
+   "v3_c_factory": "Leads with the rear wheel bearing using the steering load test, play check and hand spin, and lists the differential as the next alternative.",
+   "v3_q_lemon": "Leads with the rear wheel bearing and checks it by spinning by hand and testing for play, and mentions the differential as an alternative, though it ranks power steering oddly high."
+  },
+  "8": {
+   "v3_q_factory": "Leads with a high-idle/IAT wiring fault that doesn't explain the A/C symptom, and treats the charge issue as a secondary low-charge question without mentioning evaporator freezing.",
+   "v3_c_factory": "Leads with evaporator/expansion valve icing from moisture, confirmed by a gauge road test, then covers overcharge, clutch gap/heat dropout and recovery with a charge by weight.",
+   "v3_c_lemon": "Leads with wrong charge or moisture causing icing or a pressure cutout, confirmed by gauges, then covers the clutch air gap and the thermo control, and repairs by recovering and recharging by weight.",
+   "v3_q_lemon": "Leads with condenser airflow restriction even though both fans run, adds irrelevant rear O2 and thermostat issues, and never mentions evaporator freezing."
+  },
+  "9": {
+   "v3_c_factory": "Leads with a high-resistance left rear ground or backfeed, confirmed by a voltage-drop test, isolates the trailer wiring second, and openly says no wiring diagram was available for the ground location.",
+   "v3_q_factory": "Its lead cause (ground or backfeed via the trailer harness) is the right area, but it marks the owner's untested suspect as 'supported', puts the voltage-drop test lower down, and cites FSM support for shared circuits that does not appear to exist.",
+   "v3_c_lemon": "Leads with a left rear ground voltage-drop and jumper test, then isolates the trailer harness and converter, and correctly states that the retrieved FSM data does not cover the ground locations.",
+   "v3_q_lemon": "Leads with a poor left rear ground confirmed by a voltage-drop test and inspects the trailer splices second, which matches the key, though it overstates the trailer support and does not address ground locations."
+  },
+  "10": {
+   "v3_c_lemon": "It leads with worn starter solenoid contacts and measures the B and S terminals hot during the fault, then moves to voltage-drop tests and the inhibitor switch, which matches the key.",
+   "v3_q_lemon": "Its first issue is starter-circuit voltage drop, measured at the starter during the crank attempt, which matches the key, though it wrongly calls the ignition-switch suspicion supported and ranks it second.",
+   "v3_c_factory": "It leads with the starter solenoid and starter motor and uses one hot set of B+, S-terminal and voltage-drop readings to sort the cable, ground and inhibitor-switch alternatives, which matches the key.",
+   "v3_q_factory": "Its first issue is the starter solenoid, checked by measuring voltage at the starter terminal during the crank attempt, which matches the key, despite a weak main-relay tangent and resistance-based ground testing."
+  },
+  "11": {
+   "v3_q_lemon": "Leads with front O2 contamination (a key item but not the likeliest cause), has vacuum leak only second, never uses the trim-vs-rpm check, and its opinion check calls the MAF supported.",
+   "v3_q_factory": "Leads with front O2 contamination on timing-cover reasoning, places the vacuum leak second without a smoke test or trim-vs-rpm comparison, and treats the MAF as supported.",
+   "v3_c_lemon": "Leads with the intake manifold gasket/vacuum leak, uses the trim comparison at higher rpm plus a smoke test of the gaskets, PCV and hoses, then checks fuel pressure, MAF and O2, matching the key.",
+   "v3_c_factory": "Leads with a smoke test of the manifold gaskets, PCV and brake booster hoses plus the idle-vs-2500 rpm trim check, then fuel pressure, O2 and MAF, matching the key closely."
+  },
+  "12": {
+   "v3_c_factory": "Leads with the P0141 rear O2 heater circuit (fuse, resistance, power), then checks for exhaust leaks including the J-pipe, then the cats, which matches the key's order.",
+   "v3_q_factory": "Its first issue is the rear O2 heater circuit, as the key requires, though it wrongly treats exhaust leaks as already ruled out and reads rear O2 switching as a heater symptom rather than cat loss.",
+   "v3_c_lemon": "Leads with the P0141 heater circuit (supply, fuse, ground, resistance) before re-evaluating the cat, and still includes the upstream exhaust leak recheck, though it ranks it low.",
+   "v3_q_lemon": "Leads with the front O2 sensor, which the live data contradicts, instead of the rear O2 heater circuit the key puts first."
+  },
+  "13": {
+   "v3_c_lemon": "Leads with the accessory drive belt and pulleys, which the key doesn't list, and puts the key's likeliest cause second, though that second issue correctly cites the FSM 105,000-mile interval and includes a water pump inspection.",
+   "v3_c_factory": "Leads with the accessory drive, which is not in the key, and puts the timing belt tensioner and idlers only second, without citing the manual's interval or calling for a water pump inspection.",
+   "v3_q_lemon": "Leads with the timing belt tensioner and idler and cites the FSM 105,000-mile interval, which matches the key, though it wrongly says 104k exceeds 105k, gives valve clearance specs not taken from the provided pages, and adds an irrelevant thermostat issue.",
+   "v3_q_factory": "Leads with valve clearance, essentially the owner's valvetrain guess, over the key's likeliest front-of-engine timing component cause, wrongly describes shim bucket tappets, and claims the FSM gives no belt interval."
+  },
+  "14": {
+   "v3_c_factory": "Leads with passenger valve cover gasket/spark plug tube seals with degrease and UV dye testing, includes front seals, and correctly explains why the rear main seal doesn't fit the exhaust smoke.",
+   "v3_c_lemon": "Leads with passenger valve cover gasket and tube seals via UV dye, follows with cam/crank seals, and correctly ranks the rear main seal down because it doesn't explain oil burning on the exhaust.",
+   "v3_q_factory": "Leads with worn valve stem seals (internal consumption), which doesn't explain driveway drips or engine-bay smoke from oil on the exhaust; the valve cover gasket comes second.",
+   "v3_q_lemon": "Rejects the rear main seal correctly and opens with a cheap oil-level check, but it prioritizes PCV and internal wear and puts the external valve cover/cam seal leak only fourth, with no UV dye."
+  },
+  "15": {
+   "v3_c_factory": "Leads with the cylinder 2 plug wire, using a mist test and a wire swap, then the coil pack, and includes the manual's injector circuit steps, matching the key.",
+   "v3_c_lemon": "Leads with the cylinder 2 plug wire, using a spray test and a wire swap to see if the misfire follows, then the coil and plug, with the injector covered last, which matches the key's direction.",
+   "v3_q_lemon": "Leads with the owner's coil guess and proposes an impossible coil swap on a single-pack engine, omits the plug wires entirely, and wrongly treats the plugs as 152k miles old.",
+   "v3_q_factory": "Leads with the owner's coil guess and an inapplicable coil swap test, and ranks the cheaper and more likely plug wire check only third."
+  },
+  "16": {
+   "v3_q_lemon": "Leads with the IAC valve, which matches the key's first cause.",
+   "v3_q_factory": "Leads with the IAC valve and lists vacuum/intake leak second, in line with the key.",
+   "v3_c_lemon": "Leads with an idle relearn that it admits is not in the manual, which the key says to cite only if documented, and puts the IACV second.",
+   "v3_c_factory": "Leads with the IACV, its connector and fouled passages, with a manual-referenced memory clear and relearn, and then vacuum leaks, which matches the key."
+  },
+  "17": {
+   "v3_c_lemon": "Leads with the front-left lower arm and bushings, including the braking fore-aft shift and a possible bent arm, then covers ball joint play, tie rods, strut mount and an alignment check for bent parts, though it cites no FSM pages.",
+   "v3_q_factory": "Leads with the lower arm bushing, but it misreads the strut age as 135k miles, dismisses the ball joint without a test, uses a tie-rod-style 9/3 rock as the bushing test, adds irrelevant rear struts, and never checks for a bent component.",
+   "v3_q_lemon": "Leads with the lower arm bushing and adds an alignment check, but it calls the bushing 'confirmed' with no test, dismisses the ball joint, and leaves out tie rod, strut mount and bent-part checks.",
+   "v3_c_factory": "Leads with the lower arm rear bushing or a bent arm, then ball joint play, tie rod and strut mount citing FSM p.737, with alignment after repair, which matches the key closely."
+  },
+  "18": {
+   "v3_q_lemon": "It leads with the fuel pump and a pressure-hold test, but it invents a pressure spec (\u226535 psi) and valve-clearance specs not taken from the manual, and it never isolates the check valve from injector or regulator leakage.",
+   "v3_c_factory": "It leads with an overnight bleed-down test using clamp isolation of the check valve, regulator and injectors, defers the pressure spec to the FSM, and covers relay priming and the filter, matching the key.",
+   "v3_q_factory": "It leads with the check-valve bleed-down, which is the right direction, but it cites an unsourced '>10 psi after 10 min' spec, ranks the filter second, and skips injector and regulator leak isolation.",
+   "v3_c_lemon": "It leads with a bleed-down test with supply-clamp isolation, sends the spec to the FSM, then follows with injector/regulator and filter checks, matching the key's direction."
+  },
+  "19": {
+   "v3_q_lemon": "It correctly identifies clutch slip but goes straight to replacement without the cable free-play and adjustment check the key puts first, and it never considers oil contamination.",
+   "v3_q_factory": "It has the right cause but treats the cable as secondary, to be fixed after replacing the clutch, which skips the cheaper adjustment check, and it quotes a 10\u201320 mm free-play spec without a citation.",
+   "v3_c_lemon": "It leads with clutch slip, puts the cable free-play check first, questions whether the clutch is really cable-operated, and includes rear main seal oil contamination.",
+   "v3_c_factory": "It diagnoses clutch slip with the cable free-play check done first, verifies cable versus hydraulic before asserting either, and covers rear-seal oil contamination."
+  },
+  "20": {
+   "v3_q_lemon": "It leads with a timing chain failure that supposedly explains impossible live data, diagnosing values the key says are impossible, and it wrongly accepts that this SOHC engine has a chain.",
+   "v3_c_factory": "It leads with verifying the VIN, equipment and a rescan, flags the impossible data, the no-MIL contradiction and the belt-not-chain history, and treats the motor oil in the cooling system as the urgent real hazard.",
+   "v3_q_factory": "It leads with timing chain failure to explain the impossible data and wrongly states the engine uses a chain, despite correctly rejecting the hybrid, turbo and CVT claims.",
+   "v3_c_lemon": "It leads with the motor oil in the cooling system, the key's acceptable actionable hazard, then calls for a VIN and profile check and a rescan because the data is impossible, and it treats the turbo, CVT and hybrid claims as unverified."
+  }
+ },
+ "totals": {
+  "v3_q_lemon": 25,
+  "v3_q_factory": 25,
+  "v3_c_factory": 38,
+  "v3_c_lemon": 38
+ }
+}

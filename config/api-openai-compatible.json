@@ -1,0 +1,7 @@
+{
+  "kb_dir": "/home/YOU/open-diag-cyberdeck/kb/cars/MAKE_MODEL_YEAR",
+  "backend": "openai",
+  "openai_url": "https://api.openai.com/v1",
+  "openai_fast": "MODEL_NAME",
+  "openai_key_env": "OPENAI_API_KEY"
+}

@@ -1,0 +1,213 @@
+{
+ "model": "claude-opus-5-5",
+ "seed": 20261113,
+ "grades": {
+  "1": {
+   "steps": 1,
+   "think": 1,
+   "essay": 1
+  },
+  "2": {
+   "think": 2,
+   "steps": 2,
+   "essay": 2
+  },
+  "3": {
+   "steps": 2,
+   "essay": 2,
+   "think": 0
+  },
+  "4": {
+   "think": 2,
+   "essay": 1,
+   "steps": 0
+  },
+  "5": {
+   "steps": 2,
+   "essay": 1,
+   "think": 2
+  },
+  "6": {
+   "steps": 0,
+   "think": 2,
+   "essay": 2
+  },
+  "7": {
+   "think": 1,
+   "essay": 1,
+   "steps": 2
+  },
+  "8": {
+   "steps": 2,
+   "essay": 2,
+   "think": 2
+  },
+  "9": {
+   "essay": 1,
+   "steps": 1,
+   "think": 2
+  },
+  "10": {
+   "think": 0,
+   "steps": 2,
+   "essay": 1
+  },
+  "11": {
+   "think": 0,
+   "essay": 0,
+   "steps": 0
+  },
+  "12": {
+   "essay": 2,
+   "steps": 2,
+   "think": 2
+  },
+  "13": {
+   "essay": 2,
+   "steps": 2,
+   "think": 2
+  },
+  "14": {
+   "think": 2,
+   "essay": 2,
+   "steps": 2
+  },
+  "15": {
+   "essay": 2,
+   "think": 1,
+   "steps": 1
+  },
+  "16": {
+   "essay": 1,
+   "think": 2,
+   "steps": 0
+  },
+  "17": {
+   "steps": 2,
+   "think": 1,
+   "essay": 2
+  },
+  "18": {
+   "think": 1,
+   "steps": 0,
+   "essay": 2
+  },
+  "19": {
+   "essay": 1,
+   "think": 2,
+   "steps": 0
+  },
+  "20": {
+   "essay": 2,
+   "think": 2,
+   "steps": 2
+  }
+ },
+ "reasons": {
+  "1": {
+   "steps": "Leads with the owner's coil-pack guess, using a per-cylinder coil swap that doesn't fit the EJ251's single wasted-spark coil pack; ranks timing and intake leak above the cylinder 2 plug wire and plug, and never mentions the flashing-MIL catalyst warning.",
+   "think": "Opens with a coil swap test based on the owner's suspicion instead of the cylinder 2 wire and plug; it does raise valve-cover oil fouling of the plug and later checks wires and compression, but omits the injector and the flashing-MIL warning.",
+   "essay": "Rightly flags the coil order as unsupported but still ranks a per-cylinder coil swap first, with the wire swap second; the injector check comes last and the flashing-MIL catalyst-damage warning is missing."
+  },
+  "2": {
+   "think": "Leads with residual fuel pressure bleed-down and a gauge bleed-down test before any repair, which is the key's direction, though it skips the pinch-off isolation and jumps to the pump; the transmission 'issue' is irrelevant noise.",
+   "steps": "First issue is pressure bleed-down confirmed by a key-on gauge and timed bleed-down test, which matches the key, though it assumes the pump rather than isolating pump vs injector/regulator.",
+   "essay": "Leads with overnight fuel pressure loss and a bleed-down gauge test that correctly treats the shop's opinion as unproven, matching the key, though it omits the pinch-off isolation and regulator/injector alternatives."
+  },
+  "3": {
+   "steps": "Leads with inspecting the gas cap seal and replacing it if degraded, then the filler neck seal, which matches the key's cheap-checks-first direction even though it later puts valve click tests ahead of a smoke test.",
+   "essay": "Rejects the shop's canister/purge quote and leads with inspecting and tightening the gas cap, which matches the key's first step, though it skips the filler neck and leaves the smoke test until late.",
+   "think": "Stops diagnosis over a misreading of '4EAT' (the automatic transmission) as an unknown component, asking for data the case did not need and giving no direction on the EVAP leak."
+  },
+  "4": {
+   "think": "Leads with the rear O2 heater circuit (P0141) given the disturbed connector, testing heater resistance and wiring before considering the cat, matching the key's direction.",
+   "essay": "Starts in the right area (rear O2 harness after the connector disturbance) but leads with a shield-wire check, then ECM ground and both cats, and puts the direct heater resistance test last instead of first.",
+   "steps": "Leads with an ECM ground fault, puts the cats and front O2 sensor ahead of the rear O2 heater circuit (ranked last), and wrongly suggests a failed cat could cause P0141."
+  },
+  "5": {
+   "steps": "Leads with air trapped after the recent thermostat/coolant service, an acceptable alternative and the key's cheap first check, though it never mentions a head gasket or block test.",
+   "essay": "Leads with another thermostat failure, which is a guess the key warns against, and has the acceptable air-pocket cause only second, with no block test.",
+   "think": "Leads with air in the system after the recent refill, an acceptable first step, and includes a block test for the head gasket, though it ranks it last."
+  },
+  "6": {
+   "steps": "Leads with an ECM-to-cooling-fan-relay harness open circuit from the radiator fan FSM section, which is the wrong system; the resistor only appears second.",
+   "think": "Leads with blower motor resistor failure and an under-glovebox resistance test, which matches the key's expected direction.",
+   "essay": "Leads with the blower resistor, rejects the owner's weak-motor theory with evidence, and tests the resistor before the switch and motor."
+  },
+  "7": {
+   "think": "It leads with battery terminal corrosion and never says that 12.3 V with the engine running means the charging system is not working; the alternator comes third and the belt check comes last.",
+   "essay": "It rightly rejects the defective-battery theory and names undercharging, but its first issue is battery terminal voltage drop rather than the belt or alternator B+/fusible link, and it asserts a 2000 rpm result that was never measured.",
+   "steps": "It leads with the alternator not charging, which is an acceptable alternative, rejects the battery-defect claim, and starts with a loaded voltage test at 2000 rpm, though it ranks the cheaper belt check too low."
+  },
+  "8": {
+   "steps": "Leads with a high-resistance engine ground strap, which is an acceptable alternative per the key, though its ohmmeter test is weaker than a voltage-drop test and the TCM-ECM item is irrelevant.",
+   "essay": "Leads with a worn starter solenoid as the likely cause and confirms it by checking for voltage at the S terminal during a click, matching the key's expected direction.",
+   "think": "Leads with a voltage-drop test on the battery terminals and cable, which matches the key's acceptable high-resistance main cable alternative, and still covers ground and starter confirmation later."
+  },
+  "9": {
+   "essay": "Rejects the overheating/flush theory and points to the electrical control side, but it leads with a guessed connector fault and wiggle test instead of reading the stored TCU code, and it wrongly treats 'no DTCs' as meaningful.",
+   "steps": "Correctly dismisses the flush, but it leads with a guessed harness open circuit (then TCM, harness short, bulb) without first retrieving the TCU fault code that the flashing lamp indicates.",
+   "think": "Its first step is the FSM diagnostic blink-code procedure, and it explicitly notes the system uses blink codes rather than OBD-II, which matches the key's direction of reading the stored TCU code; it does not recommend a flush as the fix."
+  },
+  "10": {
+   "think": "Stops to question the already-stated 4EAT transmission and pivots to shift shock, missing AWD torque bind entirely.",
+   "steps": "Rejects the CV axle guess and leads with the tire diameter mismatch causing AWD bind and a tread-depth check, although it omits the FWD fuse test and the ATF check and pads the list with unrelated TCM harness issues.",
+   "essay": "Lists tire mismatch, but it leads with an unrelated TCM-ECM signal circuit test from DTC 45 shift-shock logic and explicitly prioritizes that over the cheaper tire check."
+  },
+  "11": {
+   "think": "Leads with a MAP sensor check and then O2/MAF/valve lash, and never considers an exhaust leak upstream of the front sensor even though the flanges are rusted and the tick quiets as the engine warms.",
+   "essay": "Leads with re-testing fuel pressure that is already in spec, then the A/F sensor and valve clearance, and never inspects the exhaust flanges for a leak.",
+   "steps": "Leads with A/F sensor oil contamination, then MAF, regulator, ECT and valves, and entirely misses the exhaust leak upstream of the O2 sensor that explains both the tick and the lean trims."
+  },
+  "12": {
+   "essay": "Leads with the rear wheel speed sensor disturbed during the brake job, tests it with live wheel-speed data, and rejects the shop's module claim; the EAT noise and ignoring the RL code don't change the correct lead.",
+   "steps": "Ranks the rear ABS sensor first with a live wheel-speed comparison, puts tone ring second, and treats the module/hydraulic unit as unverified; wiring is ranked too low but the lead is an accepted cause.",
+   "think": "Its first issue is the rear wheel speed sensor or wiring, with mounting, debris, connector and harness-wiggle checks plus live wheel-speed monitoring; the transmission-name detour in the summary is irrelevant but harmless."
+  },
+  "13": {
+   "essay": "Leads with rear sway bar links and bushings, tested by rocking them by hand, and rejects the strut replacement the owner wants.",
+   "steps": "Its first issue, rear sway bar bushings checked by prying the bar, matches the key, even though it ranks the end links oddly low.",
+   "think": "Leads with rear sway bar end links and bushings inspected with the car on the ground, then moves to strut mounts, which matches the key's order."
+  },
+  "14": {
+   "think": "Leads with a parasitic draw test using an ammeter in series and isolates the aftermarket stereo by pulling its fuse, which matches the key's direction and an acceptable cause.",
+   "essay": "Leads with the aftermarket stereo, confirmed by a series current-draw test and then a fuse-pull isolation, which matches the key, though its engine-off AC-ripple alternator test is flawed and ranked low.",
+   "steps": "Leads with a proper parasitic draw test that waits for modules to sleep and isolates the stereo, then correctly checks the alternator by disconnecting B+, fully matching the key despite an irrelevant telematics TSB lower down."
+  },
+  "15": {
+   "essay": "Leads with the valve cover gasket leak and says to clean the engine and inspect before any big work, which matches the key, though it wrongly claims EJ25 head gasket failure always involves coolant.",
+   "think": "Leads with an irrelevant transmission-type check; the correct leak-location plan (valve covers, pan and seals) only appears as Issue 2.",
+   "steps": "Leads with an exhaust manifold gasket, which cannot leak oil, so the lead is wrong; the valve cover gasket appears only at #2."
+  },
+  "16": {
+   "essay": "Leads with the IACV, which is an acceptable alternative, but it goes straight to a disconnect test and replacement and only cleans the throttle body/IAC passages if that test is normal, skipping the cheaper cleaning step the key puts first.",
+   "think": "Leads with the IACV: it inspects the connector, removes and checks the valve for carbon or a stuck pintle, and cleans or replaces it, then cleans the throttle body, which matches the key's direction.",
+   "steps": "Leads with the ECM ground and the TCM-ECM harness from an unrelated DTC 45 procedure, ranks the IACV only third, and adds an ABS sensor suspect, so the lead is wrong."
+  },
+  "17": {
+   "steps": "Leads with the knock sensor harness/connector being open, shorted or disturbed by the intake work, and backs the owner's suspicion; sensor failure and bolt torque are covered lower down.",
+   "think": "Leads with a needless check to confirm the transmission type, which has nothing to do with P0325, and only reaches the right knock sensor circuit check as its second issue.",
+   "essay": "First issue is a connector and harness integrity check aimed at pinched wiring near the intake, matching the key, and the cam sensor and gasket theories are reasonably ruled down."
+  },
+  "18": {
+   "think": "It correctly identifies clutch slip and mentions oil contamination, but its lead repair is a clutch-only replacement, and the oil source comes second, blamed on the input shaft seal while the rear main seal is downplayed.",
+   "steps": "It recommends a clutch-only replacement, explains the bellhousing oil as a by-product of clutch overheating, never looks for an oil source, and adds irrelevant TCM faults for a manual car.",
+   "essay": "It leads with the oil leak contaminating the clutch, calls for clean-and-reinspect to find the source (including the rear main seal), and fixes the leak before replacing the clutch, matching the key's direction."
+  },
+  "19": {
+   "essay": "Leads with the correct cause (weak battery) and a meter test, but never flags the live data as impossible for a key-on, engine-off cold capture, and treats the 14.3 V, ECT and trims as normal readings.",
+   "think": "Explicitly calls the live data invalid (2050 RPM, 88 C at 3 C ambient, 14.3 V with engine off), asks for direct meter measurements, and leads with battery testing before grounds and the starter.",
+   "steps": "Leads with an ECM ground fault and diagnoses ECT circuit shorts and opens from the impossible 88 C reading, putting the battery and connection checks last."
+  },
+  "20": {
+   "essay": "Leads with the CKP circuit (harness ground short) per FSM order, includes sensor resistance and connector checks, and explicitly rejects the shop's fuel pump theory given the pump primes and RPM reads 0.",
+   "think": "First issue is a CKP circuit wiring fault, an acceptable alternative, followed by open-circuit and sensor resistance tests, with cam sensor only conditional on P0340; it does not chase the fuel pump.",
+   "steps": "Leads with the CKP shielded-harness ground short and works through wiring, sensor resistance, mounting, and a hot-vs-cold resistance retest, all on the correct crank-signal path rather than fuel."
+  }
+ },
+ "totals": {
+  "steps": 25,
+  "think": 29,
+  "essay": 30
+ }
+}

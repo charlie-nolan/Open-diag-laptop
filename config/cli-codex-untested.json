@@ -1,0 +1,5 @@
+{
+  "kb_dir": "/home/YOU/open-diag-cyberdeck/kb/cars/MAKE_MODEL_YEAR",
+  "backend": "cli",
+  "cli_cmd": ["codex", "exec", "{prompt}"]
+}

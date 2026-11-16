@@ -1,0 +1,7 @@
+{
+  "kb_dir": "/home/YOU/open-diag-cyberdeck/kb/cars/MAKE_MODEL_YEAR",
+  "backend": "ollama",
+  "ollama_fast": "qwen3:4b-instruct-2507-q4_K_M",
+  "ollama_deep": "qwen3:4b-instruct-2507-q4_K_M",
+  "ollama_think": "qwen3:4b-instruct-2507-q4_K_M"
+}
