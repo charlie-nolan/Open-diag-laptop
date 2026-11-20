@@ -28,7 +28,7 @@ def _claude_env():
     p = _os.path.expanduser("~/.config/claude_oauth_token")
     if _os.path.isfile(p):
         tok = open(p).read().strip()
-        if tok.startswith("sk-ant-") and " " not in tok:     # a real token, not a pasted command line
+        if tok.startswith("sk-ant-") and " " not in tok:
             env["CLAUDE_CODE_OAUTH_TOKEN"] = tok
     return env
 
@@ -37,7 +37,7 @@ import time
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
-ROOT = os.path.expanduser(os.environ.get("CYBERDECK_ROOT", "~/open-diag-cyberdeck"))   # the app's folder
+ROOT = os.path.expanduser(os.environ.get("CYBERDECK_ROOT", "~/open-diag-cyberdeck"))
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ROOT, "app"))
 sys.path.insert(0, os.path.join(ROOT, "kb"))
@@ -65,12 +65,11 @@ import qa_trace  # noqa: E402
 
 scratch = os.path.join(HERE, "scratch", a.run)
 os.makedirs(scratch, exist_ok=True)
-qa_trace.DIR = os.path.join(scratch, "trace")          # keep the sim out of the deck's own trace logs
+qa_trace.DIR = os.path.join(scratch, "trace")
 LAST = {}
-CALLS = []          # every model call of the current request (the blind verdict makes two)
+CALLS = []
 
 
-# ---- record what each model call got and cost (the backend's own request, plus Ollama's counters)
 def ollama_generate(self, prompt, on_token, keep_history=False, max_new_tokens=None, temperature=None):
     import urllib.request
     msgs = [{"role": "system", "content": self.system_prompt}] if self.system_prompt else []
@@ -185,7 +184,7 @@ class HFModel:
         msgs = ([{"role": "system", "content": self.system_prompt}] if self.system_prompt else []) + \
             [{"role": "user", "content": prompt}]
         enc = self.tok.apply_chat_template(msgs, add_generation_prompt=True, return_tensors="pt", return_dict=True)
-        ids = enc["input_ids"].to(0)              # transformers 5 returns a dict here
+        ids = enc["input_ids"].to(0)
         room = max(256, (a.ctx or 4096) - ids.shape[1])
         t0 = time.time()
         with self.torch.no_grad():
@@ -295,7 +294,6 @@ def record(case, kind, text, t0, err=None, extra=None):
 
 
 for case in todo:
-    # Intake exactly as typed: the app's own load/store turns these into the case
     win._clear_case()
     s = win.session
     s.set("vehicle_info", json.dumps({"year": str(car["year"]), "make": car["make"], "model": car["model"],
@@ -315,7 +313,7 @@ for case in todo:
         orig = win._verdict_done
 
         def vd(text, o=orig):
-            got["text"] = text             # the last one: a sent-back plan is written again
+            got["text"] = text
             got["n"] = got.get("n", 0) + 1
             o(text)
         win._verdict_done = vd
