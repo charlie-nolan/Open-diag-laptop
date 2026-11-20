@@ -21,7 +21,7 @@ def _claude_env():
     p = _os.path.expanduser("~/.config/claude_oauth_token")
     if _os.path.isfile(p):
         tok = open(p).read().strip()
-        if tok.startswith("sk-ant-") and " " not in tok:     # a real token, not a pasted command line
+        if tok.startswith("sk-ant-") and " " not in tok:
             env["CLAUDE_CODE_OAUTH_TOKEN"] = tok
     return env
 
@@ -77,7 +77,7 @@ for cid in sorted(answers):
         d = json.loads(p.stdout)
         res = d.get("result") or ""
         if d.get("is_error"):
-            raise SystemExit(f"grader call failed: {res[:300]}")   # e.g. the CLI login expired: stop, don't skip all
+            raise SystemExit(f"grader call failed: {res[:300]}")
         g = json.loads(re.search(r"\{.*\}", res, re.S).group(0))
     except (ValueError, AttributeError, KeyError) as e:
         print(f"case {cid}: grader output unreadable ({e}): {p.stdout[-200:]}", flush=True)
