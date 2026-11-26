@@ -719,7 +719,7 @@ NHTSA publishes recalls, technical service bulletins and owner complaints. To in
 NHTSA files once (several GB), then build again:
 
 ```bash
-venv/bin/python build_subaru_diag_db.py download nhtsa index
+venv/bin/python kb/sources/diag_db.py download nhtsa index
 venv/bin/python kb/add_nhtsa.py --help
 ```
 
@@ -764,19 +764,19 @@ mv ~/Downloads/*.torrent raw/reddit/pushshift/
 Don't open it in a torrent program: the next step picks only your make's subreddits out of it.
 
 **Step 3: pull your make's subreddits.** Each make has a profile listing its subreddits in
-`chevrolet/profiles/makes/` (for example `honda.json` or `toyota.json`; open yours in a text editor to see the
+`makes/profiles/makes/` (for example `honda.json` or `toyota.json`; open yours in a text editor to see the
 list). Then run, with your make's file name:
 
 ```bash
-venv/bin/python chevrolet/make_pipeline.py chevrolet/profiles/makes/honda.json reddit-get
-venv/bin/python chevrolet/make_pipeline.py chevrolet/profiles/makes/honda.json reddit
+venv/bin/python makes/make_pipeline.py makes/profiles/makes/honda.json reddit-get
+venv/bin/python makes/make_pipeline.py makes/profiles/makes/honda.json reddit
 ```
 
 `reddit-get` downloads that make's subreddit files into `raw/reddit/pushshift/`. `reddit` loads them into
 `raw/reddit/reddit_honda.db`, keeping only car-repair threads. Usernames are never stored. If your make has no
 profile, copy the closest one, change `make`, `slug`, `models` and the `subs` list, and save it under your make's
 name. Subaru has no profile because it came first: put the Subaru subreddit files from the same torrent into
-`raw/reddit/pushshift/` and run `venv/bin/python load_pushshift_subaru.py`.
+`raw/reddit/pushshift/` and run `venv/bin/python kb/sources/pushshift_load.py`.
 
 **Step 4: pick your car's threads.** This keeps threads that name your model and a year near yours (or no year):
 
